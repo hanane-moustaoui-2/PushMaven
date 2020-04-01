@@ -1,0 +1,24 @@
+pipeline {
+    agent any
+    stages {
+     tools{
+  		 maven 'Maven'
+  		 jdk 'jdk1.8.0_211'
+  		 }
+        stage('---clean---') {
+            steps {
+                bat "mvn clean"
+            }
+        }
+        stage('--test--') {
+            steps {
+                bat "mvn test"
+            }
+        }
+        stage('--package--') {
+            steps {
+                bat "mvn package"
+            }
+        }
+    }
+}

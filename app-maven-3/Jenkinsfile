@@ -5,17 +5,17 @@ pipeline {
   		 maven 'Maven'
   		 jdk 'jdk1.8.0_211'
   		 }
-        stage('---clean---') {
+        stage('---clean1---') {
             steps {
                 bat "mvn clean"
             }
         }
-        stage('--test--') {
+        stage('--test1--') {
             steps {
                 bat "mvn test"
             }
         }
-        stage('--package--') {
+        stage('--package1--') {
             steps {
                 bat "mvn package"
             }
